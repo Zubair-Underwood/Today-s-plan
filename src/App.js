@@ -38,7 +38,7 @@ class App extends Component {
 
     console.log("Newitems", items);
 
-    this.setState({items:items});
+    this.setState({ items: items });
 
   }
   render() {
@@ -58,13 +58,19 @@ class App extends Component {
               </div>
             </div>
             <div className="container-fluid">
-              <ul className='list-unstyled row m-5'>
+              {/* <ul className='list-unstyled row m-5'>
                 {
                   this.state.items.map((value, i) => {
 
                     return <Plan key={i} id={i} value={value} sendData={this.handleDelete} />
                   })
                 }
+              </ul> */}
+
+              <ul className='list-unstyled row m-5'>
+
+                <Plan p={this.state.items} sendData={this.handleDelete} />
+
               </ul>
             </div>
           </div>
